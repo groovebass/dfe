@@ -47,7 +47,14 @@ a {
 }
 
 
+@media (min-width: 320px) and (max-width: 480px) {
+  .home_page_display_pic{
+    width: 18rem;
+    height: 20rem;
+    margin-top: 5rem;
 
+  }
+}
 
 
 

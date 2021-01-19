@@ -36,7 +36,7 @@ const Home = (props) => {
                     <div className='col-md-6 text-center'>
                     <img className='cloud_pic' src='/cloud.png' alt='gcloudpartner' />
                     </div>
-                    <div className='col-md-6'>
+                    <div className='col-md-6 text-center'>
                     <h2> Google Cloud <br/> Partner</h2>
                     <p> We are proud to be working with a Big <br/> tech giant on a number of projects in the <br/> Educational Sector</p>
                     <Link href='/about'>
@@ -44,7 +44,7 @@ const Home = (props) => {
                     </Link>
                     </div>  
               </div>
-
+              <br/> <br/>
 
               <div className='text-center' >
                 <h2> Who we have worked with</h2>
