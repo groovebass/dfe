@@ -6,7 +6,7 @@ body {
   margin: 0;
   font-family: -apple-system, 'Poppins', sans-serif, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    background-color: #6189b0;
+    background-color: black;
     color: aliceblue;
 }
 
@@ -45,6 +45,14 @@ a {
 .btn{
   border-radius: 2rem;
 }
+
+
+
+
+
+
+
+
 
 
 /*...............................................
