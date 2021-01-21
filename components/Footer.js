@@ -24,6 +24,8 @@ function Footer() {
                         <li><a href='/services'>Services</a></li>
                         <li><a href='/training'>Workshop</a></li>
                         <li><a href='/shop'>Shop</a></li>
+                        <li><a href='/termsOfService'>Terms of Service</a></li>
+
 
                     </ul>
                 </div>

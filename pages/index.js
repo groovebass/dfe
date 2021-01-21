@@ -9,13 +9,13 @@ const Home = (props) => {
   return (
     <div style={{minHeight: '100vh'}}>
             <Head>
-              <title>Dream Factory Enterprise | Home</title>
+              <title>DFE | Home</title>
             </Head>
             
       <div style={{ width: '90%', margin: '2rem auto' }}> 
       
 
-          <div className='row' style={{ marginTop: '5rem' }}>
+          <div className='row' style={{ marginTop: '9rem' }}>
               <div className='col-md-6'>
                     <h1>Technological and Innovative Solutions </h1>
                     <br/>
@@ -32,7 +32,7 @@ const Home = (props) => {
                   <img className='home_page_display_pic' src='/tech.png' alt='bouncing image' />
               </div>
 
-              <div  className='row '  >
+              <div  className='row ' style={{ margin: '3rem auto' }} >
                     <div className='col-md-6 text-center'>
                     <img className='cloud_pic' src='/cloud.png' alt='gcloudpartner' />
                     </div>
@@ -44,11 +44,19 @@ const Home = (props) => {
                     </Link>
                     </div>  
               </div>
-              <br/> <br/>
+              
 
               <div className='text-center' >
-                <h2> Who we have worked with</h2>
-
+                <h2> Our impact in the Education</h2>
+                      <div className='row'>
+                            <div className="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+                              <ul className='school_impact list-inline'>
+                                <li><i className="fas fa-school" aria-hidden='true'></i> 60+ Schools</li>
+                                <li><i className="fas fa-chalkboard-teacher" aria-hidden='true'></i> 800+  Teachers </li>
+                                <li><i className="fas fa-users" aria-hidden='true'></i> 19 900+ Learners</li>
+                              </ul>
+                              </div>
+                       </div>
               </div>
 
           </div>

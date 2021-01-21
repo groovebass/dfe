@@ -2,19 +2,20 @@ import React from 'react'
 import Head from 'next/head'
 
 
-const Services = () => {
+const About = () => {
     return (
         <div style={{minHeight: '100vh'}}>
             <Head>
-              <title>DFE | Services</title>
+              <title>DFE | About Us</title>
             </Head>
             
             <div style={{ width: '90%', margin: '2rem auto' }}> 
-            <h1> Services</h1>
+            <h1> About Us</h1>
+
             </div>
         </div>
     )
 }
 
 
-export default Services
+export default About

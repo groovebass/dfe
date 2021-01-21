@@ -6,7 +6,7 @@ body {
   margin: 0;
   font-family: -apple-system, 'Poppins', sans-serif, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    background-color: black;
+    background-color: #051937;
     color: aliceblue;
 }
 
@@ -23,12 +23,43 @@ a {
 
 /*.............Nav Bar.........*/
 
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+
+
 .nav-item {
   margin-left: 2rem;
   font-weight: bold;
   font-size: 1.2rem;
   
 }
+
+.dfe_logo{
+  border-radius: 50%;
+}
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+.dropdown-content {
+  position: absolute;
+  display: none;
+  right: 0;
+  min-width: 18rem;
+  padding: 1rem;
+  background-color: #0B5ED7;
+  margin: 0;
+  list-style-type: none;
+  border-radius: 0.5rem;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 
 /*.............Home Page........*/ 
 
@@ -46,17 +77,168 @@ a {
   border-radius: 2rem;
 }
 
+ul.school_impact li  i{
+  font-size: 2.5rem;
+} 
+ul.school_impact li{
+  list-style: none;
+  display: inline;
+}
 
-@media (min-width: 320px) and (max-width: 480px) {
+
+
+
+
+
+/*.............Contact Page........*/ 
+.thm-container {
+  width: 100%;
+  max-width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.contact-form-content {
+  background: #F5F6FA;
+  padding: 80px 0;
+  padding-left: 80px;
+  padding-right: 80px;
+border-radius: 2rem;
+}
+
+.thm-container .title {
+  margin-bottom: 50px;
+}
+
+
+.thm-container .title h2 {
+  color: #fff;
+  line-height: 60px;
+  font-weight: bold;
+}
+
+.contact-form input, 
+.contact-form textarea {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 68px;
+  border-radius: 35px;
+  background: #fff;
+  color: #757575;
+  font-size: 16px;
+  padding-left: 50px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.contact-form textarea {
+  height: 182px;
+  padding-top: 20px;
+}
+
+.thm-btn {
+  border: none;
+  outline: none;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 35px;
+  font-family: 'Rubik';
+  font-weight: 500;
+  font-size: 16px;
+  padding: 18px 69px;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.contact-info {
+  margin-left: -30px;
+  padding-top: 75px;
+  padding-bottom: 80px;
+}
+
+.single-contact-info h4 {
+  color:  #EBEDF4;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.contact-info .social a {
+  margin-right: 5px;
+  font-size:25px;
+}
+
+/*.............GWS PAGE........*/ 
+
+.box{
+  /* background: #FFF;
+  color: #051937; */
+  box-shadow: 0 4px 8px 0 rgba(0.9, 0.2, 0.2, 0.9);
+  border-radius: 1rem; 
+  padding: 40px 10px;
+  margin: 20px 0px;
+  
+}
+
+.box:hover{
+  background: #FFF;
+  color: #051937;
+  cursor: pointer; 
+}
+
+ul.gws_imgs li {
+  list-style: none;
+  display: inline;
+}
+
+.google_computer{
+  width: 40rem;
+  height: 21.5rem;
+}
+.gws_first_div, .gws_third_div{
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+
+
+
+
+
+@media (min-width: 320px)  {
+  /*.............NAV BAR.......*/
+  .nav_container_fluid{
+    margin: '0 0rem' 
+  }
+
+  
+
   .home_page_display_pic{
     width: 18rem;
     height: 20rem;
     margin-top: 5rem;
-
+    text-align: center;
   }
+
+
+  /*.........CONTACT PAGE..........*/
+  .thm-container .title h2{
+    font-size: 2rem
+  }
+
+  /*........GWS PAGE....*/
+  .google_computer{
+    width: 18rem;
+    height: 10.5rem;
+  }
+
+ 
+  
+  
 }
-
-
 
 
 

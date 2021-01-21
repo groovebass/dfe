@@ -1,0 +1,6 @@
+<ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a className="dropdown-item" href="#">Google Workspace</a></li>
+                            <li><a className="dropdown-item" href="#">Google Cloud Platform</a></li>
+                            <li><a className="dropdown-item" href="#">Workshops & Tainings</a></li>
+                            <li><a className="dropdown-item" href="#">Consultancy Services</a></li>
+                        </ul>
