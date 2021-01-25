@@ -1,17 +1,18 @@
 import React from 'react'
 import Link from 'next/link'
 
+// style={{ margin: '0 5rem' }}
 
 
 const NavBar = () => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark  ">
-                <div className="container-fluid" style={{ margin: '0 5rem' }}>
+        <nav className="navbar navbar-expand-lg ">
+                <div className="container-fluid" >
                     <a className="navbar-brand" href="/">
                     <img className='dfe_logo'src="/dfe.jpg" alt="dfe logo" width="70" height="64" />
                     </a>
                     <button className="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
+                    <i className="fas fa-bars" style={{fontSize: '2rem'}} aria-hidden='true'></i>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav justify">
@@ -20,7 +21,7 @@ const NavBar = () => {
                         </li>
 
                         <li className=" dropdown ">
-                        <Link href='/services'> 
+                        <Link href='#'> 
                         <a className="nav-item nav-link " >
                         Services
                         </a>

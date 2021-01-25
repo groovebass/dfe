@@ -14,7 +14,7 @@ const GoogleWorkSpace = () => {
             <h1 style={{ marginTop: '9rem' }}> Google WorkSpace</h1>
 
             <div className='row text-center gws_first_div'>
-                <div className='col-md-6'>
+                <div className='col-md-6'style={{ paddingBottom: '1rem' }}>
                     <h2> An All in one Suite</h2>
                         <p>Make your workplace a workspace in the Cloud. <br/> Google WorkSpace is an all in one online platform,
                          <br/> that facilitates easy Colleboration among your entire team  </p>

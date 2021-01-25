@@ -1,8 +1,30 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Head from 'next/head'
+import {postMessage} from '../utils/sendMail'
 
 
 const Contact = () => {
+
+        const [Message, setMessage] = useState({name: '', email: '', message: ''})
+        const {name,  email, message} = Message
+
+        const handleChangeInput = e => {
+            const {name, value} = e.target
+            setMessage({...Message, [name]: value})
+            
+        }
+
+        const handleSubmit = async e  =>  {
+            e.preventDefault()
+            const res = await postMessage(Message) 
+            if(res.err) console.log(err);
+                return  res.status(200)
+            
+            }
+
+
+
+
     return (
         <div style={{minHeight: '100vh'}}>
             <Head>
@@ -13,22 +35,22 @@ const Contact = () => {
             <h1 style={{ marginTop: '9rem' }}> Contact</h1>
             <div className="thm-container">
                         <div className="row">
-                        <div className="col-md-8">
+                        <div className="col-md-6">
                             <div className="contact-form-content">
                                 <div className="title">
                                     
-                                    <h2 style={{color: 'black'}}>Send Message</h2>
+                                    <h2 >Send Message</h2>
                                 </div>
-                                <form action="" className="contact-form" >
-                                    <input type="text" name="name" placeholder="Your full name"/>
-                                    <input type="text" name="email" placeholder="Your email address"/>
-                                    <textarea name="message" placeholder="Type your message"></textarea>
-                                    <button type="submit" className="thm-btn btn-primary">Submit Now</button>
+                                <form action="" className="contact-form "  onSubmit={handleSubmit} >
+                                    <input type="text" name="name" placeholder="Your full name"  value={name} onChange={handleChangeInput} required/>                                    
+                                    <input type="text" name="email" placeholder="Your email address" value={email} onChange={handleChangeInput} required/>
+                                    <textarea type="text" name="message" placeholder="Type your message" value={message} onChange={handleChangeInput}></textarea>
+                                    <button type="submit" className="btn btn-primary ">Submit Now</button>
                                     <div className="form-result"></div>
                                 </form>
                             </div>
                         </div>
-                        <div className="col-md-4">
+                        <div className="col-md-6">
                             <div className="contact-info text-center">
                                 <div className="title text-center">
                                   

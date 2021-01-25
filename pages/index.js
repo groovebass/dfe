@@ -46,16 +46,27 @@ const Home = (props) => {
               </div>
               
 
-              <div className='text-center' >
+              <div className='text-center ' style={{margin: '3rem 0'}}>
                 <h2> Our impact in the Education</h2>
                       <div className='row'>
-                            <div className="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
-                              <ul className='school_impact list-inline'>
-                                <li><i className="fas fa-school" aria-hidden='true'></i> 60+ Schools</li>
-                                <li><i className="fas fa-chalkboard-teacher" aria-hidden='true'></i> 800+  Teachers </li>
-                                <li><i className="fas fa-users" aria-hidden='true'></i> 19 900+ Learners</li>
-                              </ul>
-                              </div>
+                      <div className='col-md-4'>
+                              <i className="fas fa-school" style={{fontSize: '2rem'}} aria-hidden='true'></i>
+                                <h4> 60+ Schools</h4>
+                                   <p>Google for Education</p>
+                                   <p> Account Set Up and Deployment</p>
+                                </div>
+                                <div className='col-md-4'>
+                                <i className="fas fa-users" style={{fontSize: '2rem'}} aria-hidden='true'></i>
+                                <h4>19 900+ Learners</h4>
+                                   <p>Learner School Accounts</p>
+                                   <p> Online Learning tools Demos</p>
+                                </div>
+                                <div className='col-md-4'>
+                                <i className="fas fa-chalkboard-teacher" style={{fontSize: '2rem'}} aria-hidden='true'></i>
+                                <h4> 800+  Teachers</h4>
+                                   <p>Pro Accounts Created</p>
+                                   <p> Google Classroom Demos, Collaboration tools </p>
+                                </div>
                        </div>
               </div>
 

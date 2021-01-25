@@ -6,7 +6,7 @@ body {
   margin: 0;
   font-family: -apple-system, 'Poppins', sans-serif, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    background-color: #051937;
+    background-color: #051937; 
     color: aliceblue;
 }
 
@@ -20,16 +20,21 @@ a {
 * {
   box-sizing: border-box;
 }
-
+.btn{
+  border-radius: 2rem;
+}
 /*.............Nav Bar.........*/
 
 .navbar {
   position: fixed;
   width: 100%;
   top: 0;
+  z-index: 9;
+  background-color: #051937;
 }
-
-
+.navbar-toggler{
+  color: #EBEDF4;
+}
 
 .nav-item {
   margin-left: 2rem;
@@ -64,6 +69,10 @@ a {
 /*.............Home Page........*/ 
 
 .home_page_display_pic{
+  width: 18rem;
+  height: 20rem;
+  margin-top: 5rem;
+  text-align: center;
   animation: bounce 0.8s;
   animation-direction: alternate;
   animation-iteration-count: infinite;
@@ -73,17 +82,10 @@ a {
   100% { transform: translateY(-50px); }
    }
 
-.btn{
-  border-radius: 2rem;
-}
 
-ul.school_impact li  i{
-  font-size: 2.5rem;
-} 
-ul.school_impact li{
-  list-style: none;
-  display: inline;
-}
+
+
+
 
 
 
@@ -93,7 +95,7 @@ ul.school_impact li{
 /*.............Contact Page........*/ 
 .thm-container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1000px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -102,10 +104,9 @@ ul.school_impact li{
 }
 
 .contact-form-content {
-  background: #F5F6FA;
   padding: 80px 0;
-  padding-left: 80px;
-  padding-right: 80px;
+  padding-left: 10px;
+  padding-right: 10px;
 border-radius: 2rem;
 }
 
@@ -136,23 +137,11 @@ border-radius: 2rem;
 }
 
 .contact-form textarea {
-  height: 182px;
+  height: 100px;
   padding-top: 20px;
 }
 
-.thm-btn {
-  border: none;
-  outline: none;
-  display: inline-block;
-  vertical-align: middle;
-  border-radius: 35px;
-  font-family: 'Rubik';
-  font-weight: 500;
-  font-size: 16px;
-  padding: 18px 69px;
-  -webkit-transition: all .4s;
-  transition: all .4s;
-}
+
 
 .contact-info {
   margin-left: -30px;
@@ -175,8 +164,7 @@ border-radius: 2rem;
 /*.............GWS PAGE........*/ 
 
 .box{
-  /* background: #FFF;
-  color: #051937; */
+  
   box-shadow: 0 4px 8px 0 rgba(0.9, 0.2, 0.2, 0.9);
   border-radius: 1rem; 
   padding: 40px 10px;
@@ -196,9 +184,10 @@ ul.gws_imgs li {
 }
 
 .google_computer{
-  width: 40rem;
-  height: 21.5rem;
+  width: 18rem;
+  height: 10.5rem;
 }
+
 .gws_first_div, .gws_third_div{
   margin-top: 5rem;
   margin-bottom: 2rem;
@@ -206,43 +195,65 @@ ul.gws_imgs li {
 
 
 
+/*.............GCP...........*/
 
+/*********The Whole DIV**************/
+.circular-menu {
+  position: fixed;
+  bottom: 20rem;
+  right: 6.4rem;
+}
 
-@media (min-width: 320px)  {
-  /*.............NAV BAR.......*/
-  .nav_container_fluid{
-    margin: '0 0rem' 
-  }
-
-  
-
-  .home_page_display_pic{
-    width: 18rem;
-    height: 20rem;
-    margin-top: 5rem;
-    text-align: center;
-  }
-
-
-  /*.........CONTACT PAGE..........*/
-  .thm-container .title h2{
-    font-size: 2rem
-  }
-
-  /*........GWS PAGE....*/
-  .google_computer{
-    width: 18rem;
-    height: 10.5rem;
-  }
-
- 
-  
-  
+  /*********The Font Awesome + icon**************/
+.circular-menu .floating-btn i {
+  font-size: 5rem;
+  padding-top: 2.5rem;
+  transition: transform .2s;  
+}
+/*********The  small Font Awesome  icon********   for adjustments take not of the top and right properties ******/
+.circular-menu .menu-item {
+  position: absolute;
+  /* top: .1rem; */
+  right: .1rem;
+  z-index: -1;
+  display: block;
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+  font-size: 1.5rem;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 3;
+  transition: transform .3s ease, background .2s ease;
 }
 
 
+/*********Left one******/
+ .menu-item:nth-child(1) {
+  left: -3.4em;
+  top: 2em;
+}
 
+/*********Top ******/
+.circular-menu .menu-item:nth-child(2) {
+  position: absolute;
+  left: 1.5em;
+  top: -3.5em;
+}
+/*********right ******/
+.circular-menu .menu-item:nth-child(3) {
+  position: absolute;
+  left: 6.8em;
+  top: 2em;
+}
 
+/*********bottom one ******/
+.circular-menu .menu-item:nth-child(4) {
+  position: absolute;
+  left: 2em;
+  top: 6.7em;
+}
 
 /*...............................................
 ...........OTHER PAGES/ COMPONENTS CSS..........*/
