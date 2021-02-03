@@ -9,7 +9,7 @@ const NavBar = () => {
         <nav className="navbar navbar-expand-lg ">
                 <div className="container-fluid" >
                     <a className="navbar-brand" href="/">
-                    <img className='dfe_logo'src="/dfe.jpg" alt="dfe logo" width="70" height="64" />
+                    <img className='dfe_logo'src="/dfenew.png" alt="dfe logo" width="70" height="64" />
                     </a>
                     <button className="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <i className="fas fa-bars" style={{fontSize: '2rem'}} aria-hidden='true'></i>

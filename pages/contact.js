@@ -1,12 +1,16 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import Head from 'next/head'
 import {postMessage} from '../utils/sendMail'
+import { DataContext } from '../store/GlobalState'
+import {formValid } from '../utils/valid'
 
 
 const Contact = () => {
 
         const [Message, setMessage] = useState({name: '', email: '', message: ''})
         const {name,  email, message} = Message
+
+        const {state, dispatch} = useContext(DataContext)
 
         const handleChangeInput = e => {
             const {name, value} = e.target
@@ -15,11 +19,20 @@ const Contact = () => {
         }
 
         const handleSubmit = async e  =>  {
-            e.preventDefault()
-            const res = await postMessage(Message) 
-            if(res.err) console.log(err);
-                return  res.status(200)
             
+            //How to delay/prolong loading until Mail is Sent, is it to set timeout ? If I uncomment preventDefault, the form does not refresh
+            // e.preventDefault();
+            const errMsg = formValid(name, email, message)
+            if (errMsg) return dispatch({type: 'NOTIFY', payload: {error: errMsg} })
+
+            dispatch({type: 'NOTIFY', payload: {loading: true} })
+            
+            const res = await postMessage(Message) 
+                if(res.err)  dispatch({type: 'NOTIFY', payload: {error: res.err}})
+
+            alert('Message Sent')
+            return dispatch({type: 'NOTIFY', payload: {success: res.msg}})
+           
             }
 
 
@@ -46,7 +59,6 @@ const Contact = () => {
                                     <input type="text" name="email" placeholder="Your email address" value={email} onChange={handleChangeInput} required/>
                                     <textarea type="text" name="message" placeholder="Type your message" value={message} onChange={handleChangeInput}></textarea>
                                     <button type="submit" className="btn btn-primary ">Submit Now</button>
-                                    <div className="form-result"></div>
                                 </form>
                             </div>
                         </div>
@@ -75,8 +87,8 @@ const Contact = () => {
                                 <div className="single-contact-info">
                                     <h4>Follow</h4>
                                     <div className="social">
-                                        <a href="#" ><i className="fab fa-linkedin" aria-hidden='true'></i></a>  
-                                        <a href="#" ><i className="fab fa-youtube" aria-hidden='true'></i></a> 
+                                        <a href="/linkedin" ><i className="fab fa-linkedin" aria-hidden='true'></i></a>  
+                                        <a href="/youtube" ><i className="fab fa-youtube" aria-hidden='true'></i></a> 
                                     </div>
                                 </div>
                             </div>
