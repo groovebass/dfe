@@ -1,18 +1,47 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 
 // style={{ margin: '0 5rem' }}
 
 
 const NavBar = () => {
+
+    let listener = null
+    const [scrollState, setScrollState] = useState("top")
+
+
+    useEffect(() => {
+        listener = document.addEventListener("scroll", e => {
+            const scrolled = document.scrollingElement.scrollTop
+            if (scrolled >= 70) {
+                if (scrollState !== "navbar"){
+                    setScrollState('navbar')
+                }
+            }else {
+                if (scrollState !== 'top'){
+                    setScrollState('top')
+                }
+            }
+        })
+        return () => { document.removeEventListener('scroll', listener)
+    }
+    }, [scrollState])
+
+
+
     return (
-        <nav className="navbar navbar-expand-lg ">
+        <nav className="navbar navbar-expand-lg "
+        style={{
+          backgroundColor: scrollState === "top" ? "white" : "#257CFD",
+          color: scrollState === "top" ? "black" : "white",
+        }}
+        >
                 <div className="container-fluid" >
                     <a className="navbar-brand" href="/">
                     <img className='dfe_logo'src="/dfenew.png" alt="dfe logo" width="70" height="64" />
                     </a>
                     <button className="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <i className="fas fa-bars" style={{fontSize: '2rem'}} aria-hidden='true'></i>
+                    <i className="fas fa-bars" style={{fontSize: '3rem'}} aria-hidden='true'></i>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav justify">
@@ -21,7 +50,7 @@ const NavBar = () => {
                         </li>
 
                         <li className=" dropdown ">
-                        <Link href='#'> 
+                        <Link href='/services'> 
                         <a className="nav-item nav-link " >
                         Services
                         </a>

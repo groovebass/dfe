@@ -20,19 +20,23 @@ const Contact = () => {
 
         const handleSubmit = async e  =>  {
             
-            //How to delay/prolong loading until Mail is Sent, is it to set timeout ? If I uncomment preventDefault, the form does not refresh
-            // e.preventDefault();
+             e.preventDefault();
+            dispatch({type: 'NOTIFY', payload: {loading: true} })
             const errMsg = formValid(name, email, message)
             if (errMsg) return dispatch({type: 'NOTIFY', payload: {error: errMsg} })
 
-            dispatch({type: 'NOTIFY', payload: {loading: true} })
-            
-            const res = await postMessage(Message) 
-                if(res.err)  dispatch({type: 'NOTIFY', payload: {error: res.err}})
-
-            alert('Message Sent')
-            return dispatch({type: 'NOTIFY', payload: {success: res.msg}})
-           
+            try {
+                const res = await postMessage(Message) 
+                if(res.err)  dispatch({type: 'NOTIFY', payload: {error: res.err, loading: false}})
+                // alert('Message Sent')
+                return dispatch({type: 'NOTIFY', payload: {success: res.msg}})
+                        
+            } catch (err) {
+                console.log(err);
+            }finally {
+                window.location.reload()
+            }
+        
             }
 
 

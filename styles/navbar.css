@@ -1,0 +1,56 @@
+/*.............Nav Bar.........*/
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 9;
+    /* background-color: #051937; */
+  }
+  .navbar-toggler{
+    color: white;
+    
+  }
+  
+  .nav-item {
+    margin-left: 2rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    
+  }
+  
+  .dfe_logo{
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    height: 75px;
+    padding: 3px;
+    width: 75px;
+  }
+  .dropdown {
+    display: inline-block;
+    position: relative;
+  }
+  .dropdown-content {
+    position: absolute;
+    display: none;
+    right: 0;
+    min-width: 14rem;
+    padding: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+    background-color: #cfd9df;
+    margin: 0;
+    list-style-type: none;
+    border-radius: 0.5rem;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+
+  @media (max-width: 768px) {
+    .collapse  {
+        display: flex;
+  justify-content: center;
+    }
+  }

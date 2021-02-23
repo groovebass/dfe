@@ -15,7 +15,7 @@ const Home = (props) => {
       <div style={{ width: '90%', margin: '2rem auto' }}> 
       
 
-          <div className='row' style={{ marginTop: '9rem' }}>
+          <div className='row' style={{ marginTop: '12rem' }}>
               <div className='col-md-6'>
                     <h1>Technological and Innovative Solutions </h1>
                     <br/>
@@ -72,7 +72,122 @@ const Home = (props) => {
 
           </div>
 
-            
+   
+              <div id="carouselExampleControls" className="carousel slide bg-light" data-bs-ride="carousel">
+                          <div className="carousel-inner">
+
+
+                            <div className="carousel-item active">
+                                    <div className="container .carousel-content">
+                                      <div className="row">
+                                          <div className="col-md-12 col-md-offset-3 text-center">
+                                              <div className="testimonials">
+                                                <div className="active item">
+                                                    <blockquote><p>Denim you probably haven't heard of. Lorem ipsum dolor met consectetur adipisicing sit amet, <br/>consectetur adipisicing elit, of them jean shorts sed magna aliqua. Lorem ipsum dolor met.</p></blockquote>
+                                                    <div className="carousel-info">
+                                                      <img alt="" src="/cloud.png" className="pull-left"/>
+                                                          <div className="pull-left">
+                                                            <span className="testimonials-name">Lina Mars</span>
+                                                            <span className="testimonials-post">Student</span>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                     </div>
+                                                  </div>
+                                                </div>
+                                              <br/>
+                                            <br/>
+                                          <center>
+                                        <strong> <a href="https://dfenterprise.africa" target="_blank">Emergent Academy</a></strong>
+                                      </center>
+                                    <br/>
+                                  <br/>
+                            </div>
+                            <div className="carousel-item ">
+                                    <div className="container .carousel-content">
+                                      <div className="row">
+                                          <div className="col-md-12 col-md-offset-3 text-center">
+                                              <div className="testimonials">
+                                                <div className="active item">
+                                                    <blockquote><p>Denim you probably haven't heard of. Lorem ipsum dolor met consectetur adipisicing sit amet, <br/>consectetur adipisicing elit, of them jean shorts sed magna aliqua. Lorem ipsum dolor met.</p></blockquote>
+                                                    <div className="carousel-info">
+                                                      <img alt="" src="/cloud.png" className="pull-left"/>
+                                                          <div className="pull-left">
+                                                            <span className="testimonials-name">Professor</span>
+                                                            <span className="testimonials-post">UCT Lecturer</span>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                     </div>
+                                                  </div>
+                                                </div>
+                                              <br/>
+                                            <br/>
+                                          <center>
+                                        <strong> <a href="https://dfenterprise.africa" target="_blank">Sea Point</a></strong>
+                                      </center>
+                                    <br/>
+                                  <br/>
+                            </div>
+                            <div className="carousel-item ">
+                                    <div className="container .carousel-content">
+                                      <div className="row">
+                                          <div className="col-md-12 col-md-offset-3 text-center">
+                                              <div className="testimonials">
+                                                <div className="active item">
+                                                    <blockquote><p>Denim you probably haven't heard of. Lorem ipsum dolor met consectetur adipisicing sit amet, <br/>consectetur adipisicing elit, of them jean shorts sed magna aliqua. Lorem ipsum dolor met.</p></blockquote>
+                                                    <div className="carousel-info">
+                                                      <img alt="" src="/cloud.png" className="pull-left"/>
+                                                          <div className="pull-left">
+                                                            <span className="testimonials-name">Lina Mars</span>
+                                                            <span className="testimonials-post">Commercial Director</span>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                     </div>
+                                                  </div>
+                                                </div>
+                                              <br/>
+                                            <br/>
+                                          <center>
+                                        <strong> <a href="https://dfenterprise.africa" target="_blank">DFF</a></strong>
+                                      </center>
+                                    <br/>
+                                  <br/>
+                            </div>
+
+                          </div>
+                          <button className="carousel-control-prev btn btn-light" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="prev">
+                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span className="visually-hidden">Previous</span>
+                          </button>
+                          <button className="carousel-control-next btn btn-light"  data-bs-target="#carouselExampleControls"  data-bs-slide="next">
+                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span className="visually-hidden">Next</span>
+                          </button>
+                </div>
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         </div>
     </div>
